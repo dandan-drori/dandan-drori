@@ -1,4 +1,0 @@
-sitemap/
-netlify/
-robots/
-compressed-images/

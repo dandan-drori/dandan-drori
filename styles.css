@@ -23,6 +23,30 @@ body {
   background-position: 75% 0%;
 }
 
+[data-scroll] {
+  transition: all 2s;
+}
+
+[data-scroll='in'] {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+[data-scroll='out'] {
+  opacity: 0;
+  transform: translateX(-200px);
+}
+
+.card-two[data-scroll='out'] {
+  opacity: 0;
+  transform: translateX(200px);
+}
+
+.card-four[data-scroll='out'] {
+  opacity: 0;
+  transform: translateX(200px);
+}
+
 nav {
   position: fixed;
   display: flex;
@@ -123,7 +147,7 @@ header h1 span {
 .flex-home-wrapper {
   display: flex;
   margin-left: 17rem;
-  margin-top: 10rem;
+  margin-top: 8rem;
   margin-bottom: 1.5rem;
 }
 
@@ -131,9 +155,8 @@ header h1 span {
   margin-left: 16.3rem;
 }
 
-header h5 {
+header .subheaders-wrapper p {
   color: #3f3f3f;
-  font-size: 17px;
 }
 
 .home-button-wrapper {
@@ -152,14 +175,19 @@ header h5 {
 }
 
 .fa-twitter {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .fa-twitter,
 .fa-facebook-f,
 .fa-linkedin-in {
   transition: transform 300ms ease-in-out;
+  color: black;
+  transform: scale(1.2);
+  position: relative;
+  bottom: 3rem;
+  right: 1rem;
 }
 
 .fa-twitter:hover,
@@ -178,6 +206,7 @@ header h5 {
   border-radius: 30px;
   transition: all 200ms ease-in-out;
   overflow: hidden;
+  margin-top: -1rem;
 }
 
 #view-my-work:hover,
@@ -258,6 +287,109 @@ nav ul li a:focus {
   cursor: pointer;
 }
 
+.carousel-container {
+  width: 25rem;
+  height: 15rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+  height: 100%;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 250ms ease-in;
+}
+
+.carousel-items {
+  min-width: 100%;
+  height: 100%;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-left-button,
+.slide-right-button {
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  border: none;
+  outline: none;
+  font-weight: 800;
+  font-size: 1.5rem;
+  background: none;
+  color: #000;
+  transition: color 200ms;
+  cursor: pointer;
+}
+
+.slide-left-button {
+  left: -35px;
+}
+
+.slide-right-button {
+  right: -35px;
+}
+
+.carousel .first-link {
+  display: inline-block;
+  position: absolute;
+  z-index: 100;
+  bottom: 0.5rem;
+  left: 55%;
+}
+.carousel .second-link {
+  display: inline-block;
+  position: absolute;
+  z-index: 100;
+  bottom: 0.5rem;
+  left: 37%;
+}
+
+.carousel i {
+  color: black;
+}
+
+.carousel-nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.carousel-indicator {
+  border: 0;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 0 0.4rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.current-slide {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.is-hidden {
+  display: none;
+}
+
 .to-top {
   position: fixed;
   background: #000;
@@ -291,17 +423,19 @@ nav ul li a:focus {
   height: 450px;
 }
 
-.services h5 {
+.services-bubble {
   margin-top: 3rem;
   margin-bottom: 0.5rem;
   color: #f0b70c;
   border-radius: 30px;
   padding: 5px;
   background-color: #ffffff;
+  font-size: 1em;
 }
 
-.services h1 {
+.services-intro {
   margin-bottom: 2rem;
+  font-size: 1.6em;
 }
 
 .cards {
@@ -332,12 +466,13 @@ nav ul li a:focus {
   background-position: 70% 60%;
 }
 
-.cards div h3 {
+.cards-heading {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
+  font-size: 1.2em;
 }
 
-.cards div p {
+.cards-paragraph {
   color: #3f3f3f;
   text-align: center;
   margin-left: 10px;
@@ -360,80 +495,76 @@ nav ul li a:focus {
   opacity: 0.2;
 }
 
-.who {
+.testimonials-bubble {
   margin-top: 3rem;
   margin-bottom: 0.5rem;
   color: #f5f5f5;
   border-radius: 30px;
   padding: 5px;
   background-color: #050505;
+  font-size: 1em;
 }
 
-.who-i-am h1 {
+.testimonials-heading {
   margin-bottom: 2rem;
+  font-size: 1.5em;
 }
 
-.about-me {
-  margin-bottom: 2rem;
+.testimonials-wrapper {
+  height: 18rem;
+  width: 100%;
+  /* display: flex;
+  justify-content: center; */
 }
 
-.plus {
-  border: 1px solid black;
-  padding: 15px 20px;
-  margin-bottom: 2rem;
-  border-radius: 5px;
-  font-weight: bolder;
-  font-size: 20px;
-  z-index: 1;
-  transition: all 500ms ease-in-out;
-}
-
-.plus:hover {
-  background-color: #000;
-  color: #fff;
-  width: 200px;
-  border-radius: 30px;
-  text-align: center;
-  cursor: pointer;
-}
-
-.count {
+.testimonials-slider {
   display: flex;
-  border-radius: 5px;
-  background: #fff;
-  margin-top: 2rem;
-  z-index: 1;
-  box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.3);
-  width: 40%;
+  /* align-items: center; */
+  /* position: relative; */
+}
+
+.testimonials-cards {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  text-align: center;
-  padding: 1.2rem;
-  margin-bottom: 3rem;
+  align-items: center;
+  position: relative;
+  height: 14rem;
+  min-width: 40%;
+  border: 1px solid #000;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  padding: 0.2rem;
+  padding-bottom: 3rem;
+  margin: 1rem;
+  margin-top: 2rem;
+  animation: 17s testSlide linear infinite;
 }
 
-.projects,
-.clients,
-.votes {
-  margin: 0.2rem;
+.testimonials-slider:hover > .testimonials-cards {
+  animation: none;
 }
 
-.span-one,
-.span-two,
-.span-three {
-  color: #f0b70c;
+.profile-picture {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  bottom: 2.4rem;
+  margin: 0 auto;
 }
 
-.projects h1,
-.clients h1,
-.votes h1 {
-  font-size: 20px;
-  margin: 0;
+.testimonials-cards:nth-child(1) .profile-picture {
+  border: 3px solid rgb(181, 30, 201);
 }
 
-.fa-check,
-.fa-smile,
-.fa-thumbs-up {
-  margin: 1rem 4rem;
+.testimonials-cards:nth-child(2) .profile-picture {
+  border: 3px solid rgb(30, 152, 201);
+}
+
+.testimonials-cards:nth-child(3) .profile-picture {
+  border: 3px solid rgb(201, 170, 30);
 }
 
 .right-header {
@@ -710,15 +841,16 @@ footer .footer-links-wrapper {
   .home-subwrapper {
     position: relative;
     right: 15rem;
-    bottom: 2rem;
+    top: 1rem;
   }
 
   header h1 {
     min-width: 15rem;
   }
 
-  header h5 {
+  header .subheaders-wrapper p {
     min-width: 18rem;
+    font-size: 1.2em;
   }
 
   .fa-long-arrow-alt-right {
@@ -732,23 +864,26 @@ footer .footer-links-wrapper {
   .social-media-icons {
     display: flex;
     flex-direction: column;
-    margin-left: 4.3rem;
+    margin-left: 5.3rem;
   }
 
   .fa-twitter {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 
   .fa-facebook-f {
-    position: relative;
-    left: 0.15rem;
+    margin-left: 0.2rem;
   }
 
   .fa-facebook-f,
   .fa-twitter,
   .fa-linkedin-in {
     color: black;
+  }
+
+  .home #view-my-work {
+    margin-top: 2rem;
   }
 
   .services {
@@ -762,57 +897,6 @@ footer .footer-links-wrapper {
 
   .cards > div {
     width: 300px;
-  }
-
-  .count {
-    display: flex;
-    border-radius: 5px;
-    background: #fff;
-    margin-top: 2rem;
-    z-index: 1;
-    box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.3);
-    max-width: 100%;
-    min-width: 90%;
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  .projects h1,
-  .clients h1,
-  .votes h1 {
-    margin: 0;
-  }
-
-  .projects,
-  .clients,
-  .votes {
-    margin: 0.5rem;
-  }
-
-  .projects h1,
-  .clients h1,
-  .votes h1 {
-    font-size: 25px;
-  }
-
-  .fa-check,
-  .fa-smile,
-  .fa-thumbs-up {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .span-one,
-  .span-two,
-  .span-three {
-    color: #f0b70c;
-  }
-
-  .fa-check,
-  .fa-smile,
-  .fa-thumbs-up {
-    margin: 1rem 1rem;
   }
 
   .background {
@@ -1031,11 +1115,11 @@ footer .footer-links-wrapper {
 
   .ripple {
     position: absolute;
-    background: #fff;
+    background: #ccc;
     transform: translate(-50%, -50%);
     pointer-events: none;
     border-radius: 50%;
-    animation: animate 900ms linear infinite;
+    animation: animate 350ms linear;
     z-index: 9000;
   }
 
@@ -1066,30 +1150,47 @@ footer .footer-links-wrapper {
     margin-top: 5rem;
   }
 
-  #portfolio h1 {
+  .portfolio-heading {
     margin-top: 7rem;
     margin-bottom: 3rem;
     margin-left: 3rem;
+    font-size: 2em;
   }
 
   .carousel-container {
-    width: 100%;
-    height: 10rem;
+    width: 18rem;
+    height: 13rem;
+    position: relative;
     display: flex;
+    top: 3.5rem;
     justify-content: center;
-    margin-top: 1rem;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .carousel-track-container {
+    overflow: hidden;
+    height: 100%;
   }
 
   .carousel {
     display: flex;
     align-items: center;
-    width: 18rem;
-    height: 13rem;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 250ms ease-in;
   }
 
   .carousel-items {
+    min-width: 100%;
+    height: 100%;
+  }
+
+  .carousel img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
 
   .slide-left-button,
@@ -1097,13 +1198,90 @@ footer .footer-links-wrapper {
     height: 2rem;
     width: 2rem;
     position: absolute;
+    border: none;
+    outline: none;
+    font-weight: 800;
+    font-size: 1.5rem;
+    background: none;
+    color: #000;
+    transition: color 200ms;
+    cursor: pointer;
   }
 
   .slide-left-button {
-    left: 4rem;
+    left: -35px;
   }
 
   .slide-right-button {
-    right: 4rem;
+    right: -35px;
+  }
+
+  .carousel .first-link {
+    display: inline-block;
+    position: absolute;
+    z-index: 100;
+    bottom: 0.5rem;
+    left: 55%;
+  }
+  .carousel .second-link {
+    display: inline-block;
+    position: absolute;
+    z-index: 100;
+    bottom: 0.5rem;
+    left: 37%;
+  }
+
+  .carousel i {
+    color: black;
+  }
+
+  .carousel-nav {
+    position: relative;
+    top: 3.5rem;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  .carousel-indicator {
+    border: 0;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 0 0.4rem;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .current-slide {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .is-hidden {
+    display: none;
+  }
+
+  @keyframes testSlide {
+    0% {
+      left: 100%;
+    }
+    49% {
+      opacity: 1;
+    }
+    50% {
+      left: -100%;
+      opacity: 0;
+    }
+    51% {
+      left: 100%;
+      opacity: 0;
+    }
+    52% {
+      opacity: 1;
+    }
+    100% {
+      left: -100%;
+    }
   }
 }

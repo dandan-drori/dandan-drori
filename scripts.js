@@ -158,24 +158,146 @@ const validateEmail = () => {
   }
 };
 
-var slideIndex = 1;
-showDivs(slideIndex);
+// carousel functionality:
 
-function plusDivs(n) {
-  showDivs((slideIndex += n));
-}
+//get track
+//get dots
+//get slide
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName('carousel-items');
-  if (n > x.length) {
-    slideIndex = 1;
+// move to target slide on nav-indicator-button click
+const track = document.querySelector('.carousel');
+const dotsNav = document.querySelector('.carousel-nav');
+const dots = Array.from(dotsNav.children);
+const slides = Array.from(track.children);
+const nextButton = document.querySelector('.slide-right-button');
+const prevButton = document.querySelector('.slide-left-button');
+const slideWidth = slides[0].getBoundingClientRect().width;
+
+const setSlidePosition = (slide, index) => {
+  slide.style.left = slideWidth * index + 'px';
+};
+
+slides.forEach(setSlidePosition);
+
+const moveToSlide = (track, currentSlide, targetSlide) => {
+  track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+  currentSlide.classList.remove('current-slide');
+  targetSlide.classList.add('current-slide');
+};
+
+const updateDots = (currentDot, targetDot) => {
+  currentDot.classList.remove('current-slide');
+  targetDot.classList.add('current-slide');
+};
+
+const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
+  if (targetIndex === 0) {
+    prevButton.classList.add('is-hidden');
+    nextButton.classList.remove('is-hidden');
+  } else if (targetIndex === slides.length - 1) {
+    nextButton.classList.add('is-hidden');
+    prevButton.classList.remove('is-hidden');
+  } else {
+    nextButton.classList.remove('is-hidden');
+    prevButton.classList.remove('is-hidden');
   }
-  if (n < 1) {
-    slideIndex = x.length;
+};
+
+dotsNav.addEventListener('click', (e) => {
+  const targetDot = e.target.closest('button');
+  if (!targetDot) return;
+  const currentSlide = track.querySelector('.current-slide');
+  const currentDot = dotsNav.querySelector('.current-slide');
+  const targetIndex = dots.findIndex((dot) => dot === targetDot);
+  const targetSlide = slides[targetIndex];
+
+  moveToSlide(track, currentSlide, targetSlide);
+  updateDots(currentDot, targetDot);
+  hideShowArrows(slides, prevButton, nextButton, targetIndex);
+});
+
+// when i click right, move slides to the right
+nextButton.addEventListener('click', (e) => {
+  const currentSlide = track.querySelector('.current-slide');
+  const nextSlide = currentSlide.nextElementSibling;
+  const currentDot = dotsNav.querySelector('.current-slide');
+  const nextDot = currentDot.nextElementSibling;
+  const nextIndex = slides.findIndex((slide) => slide === nextSlide);
+
+  moveToSlide(track, currentSlide, nextSlide);
+  updateDots(currentDot, nextDot);
+  hideShowArrows(slides, prevButton, nextButton, nextIndex);
+});
+
+// when i click left, move slides to the left
+prevButton.addEventListener('click', (e) => {
+  const currentSlide = track.querySelector('.current-slide');
+  const prevSlide = currentSlide.previousElementSibling;
+  const currentDot = dotsNav.querySelector('.current-slide');
+  const prevDot = currentDot.previousElementSibling;
+  const prevIndex = slides.findIndex((slide) => slide === prevSlide);
+
+  moveToSlide(track, currentSlide, prevSlide);
+  updateDots(currentDot, prevDot);
+  hideShowArrows(slides, prevButton, nextButton, prevIndex);
+});
+
+let leftOrRight = 'right';
+let navLeftOrRight = 'right';
+
+autoMove = () => {
+  const currentSlide = track.querySelector('.current-slide');
+  const firstSlide = track.querySelector('.first-slide');
+  const secondSlide = track.querySelector('.second-slide');
+  const thirdSlide = track.querySelector('.third-slide');
+  let targetSlide = currentSlide.nextElementSibling;
+  if (currentSlide === thirdSlide) {
+    // If the current slide is the last one, set the
+    // target slide to one slide to the left.
+    targetSlide = currentSlide.previousElementSibling;
+    leftOrRight = 'left';
+  } else if (currentSlide === secondSlide && leftOrRight === 'left') {
+    // If the current slide is the middle slide, AND
+    // the leftOrRight variable is set to 'left',
+    // set the target slide to one to the left.
+    targetSlide = currentSlide.previousElementSibling;
+  } else if (currentSlide === secondSlide && leftOrRight === 'right') {
+    // If the current slide is the middle slide, AND
+    // the leftOrRight variable is set to 'right',
+    // set the target slide to one to the right.
+    targetSlide = currentSlide.nextElementSibling;
+    leftOrRight = 'left';
+  } else if (currentSlide === firstSlide) {
+    // If the current slide is the first slide,
+    // set the target slide to one slide to the right.
+    targetSlide = currentSlide.nextElementSibling;
+    leftOrRight = 'right';
   }
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = 'none';
+  const currentDot = dotsNav.querySelector('.current-slide');
+  let targetDot = currentDot.nextElementSibling;
+  if (currentDot === dotsNav.lastChild.previousSibling) {
+    targetDot = currentDot.previousElementSibling;
+  } else if (
+    currentDot === dotsNav.lastChild.previousSibling.previousElementSibling &&
+    navLeftOrRight === 'right'
+  ) {
+    targetDot = currentDot.nextElementSibling;
+    navLeftOrRight = 'left';
+  } else if (
+    currentDot === dotsNav.lastChild.previousSibling.previousElementSibling &&
+    navLeftOrRight === 'left'
+  ) {
+    targetDot = currentDot.previousElementSibling;
+    navLeftOrRight = 'right';
+  } else if (currentDot === dotsNav.firstChild.nextSibling) {
+    targetDot = currentDot.nextElementSibling;
   }
-  x[slideIndex - 1].style.display = 'block';
-}
+  moveToSlide(track, currentSlide, targetSlide);
+  updateDots(currentDot, targetDot);
+};
+
+let startMoving = setInterval(autoMove, 2000);
+
+stopMoving = () => {
+  clearInterval(startMoving);
+};

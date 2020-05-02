@@ -15,16 +15,19 @@
 
       gtag('config', 'UA-163587214-1');
     </script>
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="keywords" content="web developer, web development, front end web developer, website builder, low price website, high quality website"/>
+    <meta name="description" content="Do you need a new website for yourself or your business? I build beautifully designed websites using the most up-to-date technologies and frameworks. Communication is very important to me so we will be working together all along the way"/>
+    <meta name="robots" content="index,follow" />
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="styles.css" type="text/css" />
     <link
       href="https://fonts.googleapis.com/css?family=Muli&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
     <script
       src="https://kit.fontawesome.com/a91f9c67ce.js"
       crossorigin="anonymous"
@@ -83,22 +86,22 @@
             <div class="flex-home-wrapper">
               <i class="fas fa-long-arrow-alt-right fa-3x"></i>
               <div class="heading-wrapper">
-                <h1>I'm Dandan <span>Drori</span>.</h1>
-                <h1 class="second-h1">Front End Developer</h1>
+                <h1>I'm Dandan <span>Drori</span>.
+                  Front End Developer</h1>
               </div>
             </div>
             <div class="social-wrapper">
               <div class="subheaders-wrapper">
-                <h5>
+                <p>
                   I am a web developer focused on building great web
                   applications.
-                </h5>
-                <h5>
+                </p>
+                <p>
                   I enjoy creating beautifully designed,
-                </h5>
-                <h5>
+                </p>
+                <p>
                   intuitive and functional websites for my clients.
-                </h5>
+                </p>
               </div>
               <div class="social-media-icons">
                 <a href="https://www.facebook.com/dandandrorid" target="_blank"
@@ -127,17 +130,31 @@
               </button>
             </div>
           </div>
-          <div class="carousel-container">
-          <div class="carousel">
-            <img src="./portfolioProject.JPG" alt="a link to the source code of my portfolio" class="carousel-items" id="carousel-portfolio"> 
-            <span><a href="#"></a></span>
-            <img src="./compressed-images/blank-business-composition-computer-373076-min.jpg" alt="a link to the source code of my portfolio" class="carousel-items" id="carousel-portfolio"> 
-            <span><a href="#"></a></span>
-            <img src="./compressed-images/background-test-min.jpg" alt="a link to the source code of my portfolio" class="carousel-items" id="carousel-portfolio"> 
-            <span><a href="#"></a></span>
-            <button class="slide-left-button" onclick="plusDivs(-1)">&#10094;</button>
-            <button class="slide-right-button" onclick="plusDivs(1)">&#10095;</button>
+          <div class="carousel-container" onclick="stopMoving()">
+            <button class="slide-left-button is-hidden">&#10094;</button>
+            <div class="carousel-track-container" onmouseover="stopMoving()">
+          <ul class="carousel">
+            <li class="carousel-items current-slide first-slide" id="carousel-portfolio">
+              <img src="./portfolioProject.JPG" alt="a link to the source code of my portfolio"> 
+              <span class="first-link"><a href="https://github.com/dandan-drori/dandan-drori" target="_blank"><i class="fab fa-github fa-2x"></i></a></span>
+              <span class="second-link"><a href="https://codepen.io/dandan-drori/pen/zYvNOjV" target="_blank"><i class="fas fa-gamepad fa-2x"></i></a></span>
+            </li>
+            <li class="carousel-items second-slide">
+              <img src="./compressed-images/blank-business-composition-computer-373076-min.jpg" alt="a link to the source code of my portfolio"> 
+              <span><a href="#"></a></span>
+            </li>
+            <li class="carousel-items third-slide">
+              <img src="./compressed-images/background-test-min.jpg" alt="a link to the source code of my portfolio"> 
+              <span><a href="#"></a></span>
+            </li>
+          </ul>
+        </div>
+          <button class="slide-right-button">&#10095;</button>
           </div>
+          <div class="carousel-nav">
+            <button class="carousel-indicator current-slide"></button>
+            <button class="carousel-indicator"></button>
+            <button class="carousel-indicator"></button>
           </div>
         </header>
         <a href="#" class="to-top">
@@ -145,37 +162,37 @@
         </a>
       </article>
       <article class="services" id="services">
-        <h5>Services</h5>
-        <h1>What I Offer</h1>
+        <p class="services-bubble">Services</p>
+        <p class="services-intro">What I Offer</p>
         <div class="cards">
-          <div class="card-one">
+          <div class="card-one" data-scroll>
             <i class="fas fa-laptop-code fa-3x"></i>
-            <h3>Websites</h3>
-            <p>
+            <p class="cards-heading">Websites</p>
+            <p class="cards-paragraph">
               I build great and functional websites using only the most
               up-to-date technologies.
             </p>
           </div>
-          <div class="card-two">
+          <div class="card-two" data-scroll>
             <i class="fas fa-mobile-alt fa-3x"></i>
-            <h3>Responsive</h3>
-            <p>
+            <p class="cards-heading">Responsive</p>
+            <p class="cards-paragraph">
               All my websites are responsive and mobile friendly while
               maintaining functionality.
             </p>
           </div>
-          <div class="card-three">
+          <div class="card-three" data-scroll>
             <i class="fas fa-layer-group fa-3x"></i>
-            <h3>Web Design</h3>
-            <p>
+            <p class="cards-heading">Web Design</p>
+            <p class="cards-paragraph">
               I create beautiful and original designs making your website
               elegant and unique.
             </p>
           </div>
-          <div class="card-four">
+          <div class="card-four" data-scroll>
             <i class="fas fa-search fa-3x"></i>
-            <h3>SEO</h3>
-            <p>
+            <p class="cards-heading">SEO</p>
+            <p class="cards-paragraph">
               I use the best methods and latest tricks to bump up your Search
               Engine Optimization.
             </p>
@@ -185,41 +202,34 @@
 
       <article class="who-i-am" id="who-i-am">
         <div class="background"></div>
-        <h5 class="who">Who I Am</h5>
-        <h1>A Few Words About Me</h1>
-        <p class="about-me">
-          I am a self taught Front End Developer specializing in building
-          functional responsive web applications
-        </p>
-        <div
-          class="plus myRipple"
-          data-animation="ripple"
-          onmouseover="plusOnMouseOver()"
-          onmouseout="plusOnMouseOut()"
-        >
-          +
-        </div>
-        <div class="count">
-          <div class="projects">
-            <h1>1200<span class="span-one">+</span></h1>
-            <i class="fas fa-check fa-2x"></i>
-            <h5 class="comment-one">Completed Projects</h5>
-          </div>
-          <div class="clients">
-            <h1>15<span class="span-two">k</span></h1>
-            <i class="far fa-smile fa-2x"></i>
-            <h5 class="comment-two">Happy Clients</h5>
-          </div>
-          <div class="votes">
-            <h1>1500<span class="span-three">+</span></h1>
-            <i class="far fa-thumbs-up fa-2x"></i>
-            <h5 class="comment-three">Up-Votes</h5>
+        <p class="testimonials-bubble">Testimonials</p>
+        <p class="testimonials-heading">What My Clients Say About Me</p>
+        <div class="testimonials-wrapper">
+          <div class="testimonials-slider">
+            <div class="testimonials-cards">
+              <img src="./profile pic.jpg" alt="profile picture of a person quoted for testimonials" class="profile-picture">
+              <p><i class="fas fa-quote-left"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, dolores?<i class="fas fa-quote-right"></i></p>
+              <p class="testimonials-name">person name</p>
+              <p class="quote-from">social network with symbol</p>
+            </div>
+            <div class="testimonials-cards">
+              <img src="./profile pic.jpg" alt="profile picture of a person quoted for testimonials" class="profile-picture">
+              <p><i class="fas fa-quote-left"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, dolores?<i class="fas fa-quote-right"></i></p>
+              <p class="testimonials-name">person name</p>
+              <p class="quote-from">social network with symbol</p>
+            </div>
+            <div class="testimonials-cards">
+              <img src="./profile pic.jpg" alt="profile picture of a person quoted for testimonials" class="profile-picture">
+              <p><i class="fas fa-quote-left"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, dolores?<i class="fas fa-quote-right"></i></p>
+              <p class="testimonials-name">person name</p>
+              <p class="quote-from">social network with symbol</p>
+            </div>
           </div>
         </div>
       </article>
     </div>
       <div id="portfolio" class="tab-content">
-        <h1>My Portfolio</h1>
+        <p class="portfolio-heading">My Portfolio</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde mollitia corrupti excepturi est! Maxime voluptate earum eaque aperiam quis consequatur deserunt accusantium? Id maxime harum cumque sed aliquam iste fuga quaerat omnis et! Asperiores, nisi quo! Voluptatem doloremque, debitis earum perspiciatis quos iusto quae, optio tempora eligendi maxime harum, culpa error quasi consectetur. Sit ratione nihil, nulla vitae asperiores saepe aspernatur molestiae enim laboriosam animi omnis doloremque voluptatem libero praesentium reiciendis ab atque, a obcaecati cupiditate dicta. Dolorum veniam expedita quibusdam autem ex atque voluptatibus asperiores! Voluptates quaerat eum dolorum perspiciatis libero dignissimos soluta voluptatibus non illo molestiae debitis aut quibusdam perferendis, iusto nostrum rem temporibus. Iste officia maiores dignissimos quibusdam id incidunt pariatur fuga aperiam. Necessitatibus, iusto explicabo quibusdam consequuntur rerum corporis impedit blanditiis? Saepe obcaecati natus soluta quisquam atque ea totam vel et eaque, minima autem. Aperiam nisi ut consectetur debitis, incidunt eius sapiente eum libero recusandae unde blanditiis a harum obcaecati, accusamus quo quisquam suscipit, impedit nulla qui? Porro voluptatum rem illum explicabo voluptas dolores eum perspiciatis molestiae mollitia est praesentium rerum esse modi placeat dignissimos, labore eligendi animi quidem, velit repellendus! Vel cum quas, aperiam fuga sit, eveniet beatae eaque repellendus exercitationem, aut non dolor pariatur alias a dignissimos dicta? Fuga, consectetur autem minus doloremque quos ipsa incidunt reprehenderit laudantium, id rem odit reiciendis repudiandae doloribus placeat obcaecati, neque quam tenetur magni voluptatem rerum maxime nulla deserunt! Necessitatibus, magni? Harum reiciendis voluptatibus voluptate. Corrupti atque culpa hic alias provident, dolor voluptatum ad natus delectus, beatae labore voluptas ducimus doloremque quis dicta laboriosam, temporibus fuga assumenda totam? Sed, perferendis. Blanditiis quisquam velit, expedita natus beatae veniam alias, cupiditate inventore itaque animi nemo vitae atque impedit suscipit, eum nam! Delectus, repellat quidem. Blanditiis praesentium illum, eveniet, ducimus eligendi fugit tenetur corrupti quasi exercitationem doloremque possimus provident, aspernatur repellendus?</p>
       </div>
       <div id="hireme" class="tab-content">
@@ -286,6 +296,7 @@
       <div class="logo-and-copyright-wrapper">
       <div class="footer-logo">Dandan <span>Drori</span></div>
       <p><i class="far fa-copyright"></i> 2019 Dandan Drori</p>
+      <a href="https://www.freepik.com/free-photos-vectors/technology">Technology photo created by katemangostar - www.freepik.com</a>
     </div>
       <div class="footer-links-wrapper">
         <div><a href="#" class="footer-links">pricing</a></div>
@@ -299,5 +310,8 @@
       </div>
     </footer>
     <script src="./scripts.js"></script>
+    <script>ScrollOut({
+      once: true
+    });</script>
   </body>
 </html>

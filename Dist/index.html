@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-163587214-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-163587214-1');
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a91f9c67ce.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="site-wrapper">
+        <nav id="nav-bar">
+          <div class="logo">Dandan <span>Drori</span></div>
+          <ul id="nav-links">
+            <li class="nav-items">
+              <a href="#">Home</a>
+            </li>
+            <li class="nav-items">
+              <a href="#">Portfolio</a>
+            </li>
+            <li class="nav-items">
+              <a href="#contact-section">Contact</a>
+            </li>
+          </ul>
+          <i id="hamburger" class="fas fa-bars" onclick="openNav()"></i>
+          <i id="x" class="fas fa-times" onclick="openNav()"></i>
+        </nav>
+        <div class="tab-bar">
+          <ul>
+            <li>
+              <button
+                id="default-open"
+                class="tab-links tab-active"
+                onclick="openPage('home', this)"
+              >
+                <i class="fas fa-home fa-lg"></i>
+                Home
+              </button>
+            </li>
+            <li>
+              <button class="tab-links" onclick="openPage('portfolio', this)">
+                <i class="fas fa-briefcase fa-lg"></i>
+                Portfolio
+              </button>
+            </li>
+            <li>
+              <button class="tab-links" onclick="openPage('hireme', this)">
+                <i class="fas fa-phone fa-lg"></i>
+                Hire Me
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div id="home" class="tab-content">
+        <article class="home">
+        <header class="home-page">
+          <div class="d">D</div>
+          <div class="d-two">D</div>
+          <div class="home-subwrapper">
+            <div class="flex-home-wrapper">
+              <i class="fas fa-long-arrow-alt-right fa-3x"></i>
+              <div class="heading-wrapper">
+                <h1>I'm Dandan <span>Drori</span>.</h1>
+                <h1 class="second-h1">Front End Developer</h1>
+              </div>
+            </div>
+            <div class="social-wrapper">
+              <div class="subheaders-wrapper">
+                <h5>
+                  I am a web developer focused on building great web
+                  applications.
+                </h5>
+                <h5>
+                  I enjoy creating beautifully designed,
+                </h5>
+                <h5>
+                  intuitive and functional websites for my clients.
+                </h5>
+              </div>
+              <div class="social-media-icons">
+                <a href="https://www.facebook.com/dandandrorid" target="_blank"
+                  ><i class="fab fa-facebook-f fa-lg"></i
+                ></a>
+                <a href="https://twitter.com/DroriDandan" target="_blank"
+                  ><i class="fab fa-twitter fa-lg"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/dandan-drori-9b2496122/"
+                  target="_blank"
+                  ><i class="fab fa-linkedin-in fa-lg"></i
+                ></a>
+              </div>
+            </div>
+            <div class="home-button-wrapper">
+              <button
+                class="myRipple"
+                data-animation="ripple"
+                id="view-my-work"
+              >
+                View My Work
+                <div>
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+          <div class="carousel-container">
+          <div class="carousel">
+            <div class="carousel-items" id="carousel-portfolio">
+            <img src="./portfolioProject.JPG" alt="a link to the source code of my portfolio"> 
+            <span class="first-link"><a href="https://github.com/dandan-drori/dandan-drori" target="_blank"><i class="fab fa-github fa-2x"></i></a></span>
+            <span class="second-link"><a href="https://codepen.io/dandan-drori/pen/zYvNOjV" target="_blank"><i class="fas fa-gamepad fa-2x"></i></a></span>
+          </div>
+          <div class="carousel-items">
+            <img src="./compressed-images/blank-business-composition-computer-373076-min.jpg" alt="a link to the source code of my portfolio"> 
+            <span><a href="#"></a></span>
+          </div>
+          <div class="carousel-items">
+            <img src="./compressed-images/background-test-min.jpg" alt="a link to the source code of my portfolio"> 
+            <span><a href="#"></a></span>
+          </div>
+            <button class="slide-left-button" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="slide-right-button" onclick="plusDivs(1)">&#10095;</button>
+            <div class="carousel-nav">
+              <button class="carousel-indicator current-slide"></button>
+              <button class="carousel-indicator"></button>
+              <button class="carousel-indicator"></button>
+            </div>
+          </div>
+          </div>
+        </header>
+        <a href="#" class="to-top">
+          <i class="fas fa-chevron-up"></i>
+        </a>
+      </article>
+      <article class="services" id="services">
+        <h5>Services</h5>
+        <h1>What I Offer</h1>
+        <div class="cards">
+          <div class="card-one">
+            <i class="fas fa-laptop-code fa-3x"></i>
+            <h3>Websites</h3>
+            <p>
+              I build great and functional websites using only the most
+              up-to-date technologies.
+            </p>
+          </div>
+          <div class="card-two">
+            <i class="fas fa-mobile-alt fa-3x"></i>
+            <h3>Responsive</h3>
+            <p>
+              All my websites are responsive and mobile friendly while
+              maintaining functionality.
+            </p>
+          </div>
+          <div class="card-three">
+            <i class="fas fa-layer-group fa-3x"></i>
+            <h3>Web Design</h3>
+            <p>
+              I create beautiful and original designs making your website
+              elegant and unique.
+            </p>
+          </div>
+          <div class="card-four">
+            <i class="fas fa-search fa-3x"></i>
+            <h3>SEO</h3>
+            <p>
+              I use the best methods and latest tricks to bump up your Search
+              Engine Optimization.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="who-i-am" id="who-i-am">
+        <div class="background"></div>
+        <h5 class="who">Testimonials</h5>
+        <h1>What My Clients Say About Me</h1>
+        <div class="testimonials-wrapper">
+          <div class="testimonials-slider">
+            <div class="testimonials-cards">
+              <img src="./profile pic.jpg" alt="profile picture of a person quoted for testimonials" class="profile-picture">
+              <p><i class="fas fa-quote-left"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, dolores?<i class="fas fa-quote-right"></i></p>
+              <h5>person name</h5>
+              <h6>social network with symbol</h>
+            </div>
+            <div class="testimonials-cards">
+              <img src="./profile pic.jpg" alt="profile picture of a person quoted for testimonials" class="profile-picture">
+              <p><i class="fas fa-quote-left"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, dolores?<i class="fas fa-quote-right"></i></p>
+              <h5>person name</h5>
+              <h6>social network with symbol</h6>
+            </div>
+            <div class="testimonials-cards">
+              <img src="./profile pic.jpg" alt="profile picture of a person quoted for testimonials" class="profile-picture">
+              <p><i class="fas fa-quote-left"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, dolores?<i class="fas fa-quote-right"></i></p>
+              <h5>person name</h5>
+              <h6>social network with symbol</h6>
+            </div>
+          </div>
+        </div>
+        <div class="count">
+          <div class="projects">
+            <h1>1200<span class="span-one">+</span></h1>
+            <i class="fas fa-check fa-2x"></i>
+            <h5 class="comment-one">Completed Projects</h5>
+          </div>
+          <div class="clients">
+            <h1>15<span class="span-two">k</span></h1>
+            <i class="far fa-smile fa-2x"></i>
+            <h5 class="comment-two">Happy Clients</h5>
+          </div>
+          <div class="votes">
+            <h1>1500<span class="span-three">+</span></h1>
+            <i class="far fa-thumbs-up fa-2x"></i>
+            <h5 class="comment-three">Up-Votes</h5>
+          </div>
+        </div>
+      </article>
+    </div>
+      <div id="portfolio" class="tab-content">
+        <h1>My Portfolio</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde mollitia corrupti excepturi est! Maxime voluptate earum eaque aperiam quis consequatur deserunt accusantium? Id maxime harum cumque sed aliquam iste fuga quaerat omnis et! Asperiores, nisi quo! Voluptatem doloremque, debitis earum perspiciatis quos iusto quae, optio tempora eligendi maxime harum, culpa error quasi consectetur. Sit ratione nihil, nulla vitae asperiores saepe aspernatur molestiae enim laboriosam animi omnis doloremque voluptatem libero praesentium reiciendis ab atque, a obcaecati cupiditate dicta. Dolorum veniam expedita quibusdam autem ex atque voluptatibus asperiores! Voluptates quaerat eum dolorum perspiciatis libero dignissimos soluta voluptatibus non illo molestiae debitis aut quibusdam perferendis, iusto nostrum rem temporibus. Iste officia maiores dignissimos quibusdam id incidunt pariatur fuga aperiam. Necessitatibus, iusto explicabo quibusdam consequuntur rerum corporis impedit blanditiis? Saepe obcaecati natus soluta quisquam atque ea totam vel et eaque, minima autem. Aperiam nisi ut consectetur debitis, incidunt eius sapiente eum libero recusandae unde blanditiis a harum obcaecati, accusamus quo quisquam suscipit, impedit nulla qui? Porro voluptatum rem illum explicabo voluptas dolores eum perspiciatis molestiae mollitia est praesentium rerum esse modi placeat dignissimos, labore eligendi animi quidem, velit repellendus! Vel cum quas, aperiam fuga sit, eveniet beatae eaque repellendus exercitationem, aut non dolor pariatur alias a dignissimos dicta? Fuga, consectetur autem minus doloremque quos ipsa incidunt reprehenderit laudantium, id rem odit reiciendis repudiandae doloribus placeat obcaecati, neque quam tenetur magni voluptatem rerum maxime nulla deserunt! Necessitatibus, magni? Harum reiciendis voluptatibus voluptate. Corrupti atque culpa hic alias provident, dolor voluptatum ad natus delectus, beatae labore voluptas ducimus doloremque quis dicta laboriosam, temporibus fuga assumenda totam? Sed, perferendis. Blanditiis quisquam velit, expedita natus beatae veniam alias, cupiditate inventore itaque animi nemo vitae atque impedit suscipit, eum nam! Delectus, repellat quidem. Blanditiis praesentium illum, eveniet, ducimus eligendi fugit tenetur corrupti quasi exercitationem doloremque possimus provident, aspernatur repellendus?</p>
+      </div>
+      <div id="hireme" class="tab-content">
+        <article class="contact" id="contact-section">
+          <div class="contact-left-wrapper">
+            <h1>Contact me</h1>
+            <h4>I will get back to you as soon as possible</h4>
+          </div>
+          <div class="contact-right-wrapper">
+            <h1 class="right-header">Contact Me</h1>
+            <form name="contact" class="contact-form" netlify>
+              <label for="name"
+                >Name
+                <div>
+                  *<span class="tooltip">This field is required</span>
+                </div></label
+              >
+              <input
+                type="text"
+                name="name"
+                placeholder="John Smith"
+                data-state="invalid"
+                required
+              />
+              <label for="email"
+                >Email
+                <div>*<span class="tooltip">This field is required</span></div>
+              </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="example@email.com"
+                data-state="invalid"
+                onkeydown="validateEmail()"
+                required
+              /><span id="email-text"></span>
+              <label for="message"
+                >Message
+                <div>
+                  *<span class="tooltip">This field is required</span>
+                </div></label
+              >
+              <input
+                type="text"
+                name="message"
+                placeholder="Write your message here..."
+                class="message-input"
+                data-state="invalid"
+                required
+              />
+              <input
+                type="submit"
+                value="Send Message"
+                name="submit"
+                class="myRipple"
+                data-animation="ripple"
+              />
+            </form>
+          </div>
+        </article>
+    </div> 
+    <footer>
+      <div class="logo-and-copyright-wrapper">
+      <div class="footer-logo">Dandan <span>Drori</span></div>
+      <p><i class="far fa-copyright"></i> 2019 Dandan Drori</p>
+      <a href="https://www.freepik.com/free-photos-vectors/technology">Technology photo created by katemangostar - www.freepik.com</a>
+    </div>
+      <div class="footer-links-wrapper">
+        <div><a href="#" class="footer-links">pricing</a></div>
+        <div><a href="#" class="footer-links">items</a></div>
+        <div><a href="#" class="footer-links">why me</a></div>
+        <div><a href="#" class="footer-links">my goals</a></div>
+        <div><a href="#" class="footer-links">testimonials</a></div>
+        <div><a href="#" class="footer-links">FAQs</a></div>
+        <div><a href="#" class="footer-links">support me</a></div>
+        <div><a href="#" class="footer-links">stay tuned</a></div>
+      </div>
+    </footer>
+    <script src="./scripts.js"></script>
+  </body>
+</html>
