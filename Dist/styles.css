@@ -430,7 +430,6 @@ footer {
 footer .logo-and-copyright-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: left;
 }
 .footer-logo {
   position: relative;
@@ -514,6 +513,11 @@ footer .footer-rights {
     list-style: none;
     transition: all 500ms ease-in-out;
   }
+
+  nav ul li:last-child {
+    margin-top: 10px;
+  }
+
   nav ul li a {
     text-decoration: none;
     font-size: 1.2rem;
@@ -607,11 +611,12 @@ footer .footer-rights {
   footer {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     position: relative;
+    padding-left: 1.5rem;
     bottom: 3rem;
-    padding-left: 1rem;
-    padding-top: 0.3rem;
-    padding-bottom: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
   }
   .footer-logo {
     position: relative;
