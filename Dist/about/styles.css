@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Roboto', 'Franklin Gothic Medium', 'Arial Narrow',
+    Arial, sans-serif;
+}
+html {
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  background: url(./Online_school_PNG.png), url(./main-background.png);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 23rem, 300px 710px;
+  background-origin: border-box, border-box;
+  background-position: 70vw 15vh, 75% 0%;
+}
+[data-scroll] {
+  transition: all 2s;
+}
+[data-scroll='in'] {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-scroll='out'] {
+  opacity: 0;
+  transform: translateX(-200px);
+}
+.card-two[data-scroll='out'] {
+  opacity: 0;
+  transform: translateX(200px);
+}
+.card-four[data-scroll='out'] {
+  opacity: 0;
+  transform: translateX(200px);
+}
+nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 97.75%;
+  min-width: 97.75%;
+  margin: 1rem 1rem;
+  padding: 0.5rem 0.5rem;
+  box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.3);
+  z-index: 20000;
+}
+nav .logo {
+  font-size: 1.5rem;
+}
+nav .logo span {
+  background: url(./main-background.png);
+  background-repeat: no-repeat;
+  background-size: 100% 13px;
+  background-position: 75% 67%;
+}
+nav ul {
+  display: flex;
+  margin: 1rem;
+}
+nav ul li {
+  margin: 0 20px;
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  border: 1px;
+  border-radius: 30px;
+  padding: 3px 7px;
+  padding-bottom: 6px;
+  background: none;
+  transition: all 200ms ease-in-out;
+}
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #fff;
+  border-radius: 30px;
+  padding: 3px 7px;
+  padding-bottom: 6px;
+  background: #000;
+}
+.tab-links {
+  display: none;
+}
+#hamburger {
+  display: none;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 0.7rem;
+  top: 0.9rem;
+}
+#x {
+  display: none;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 0.7rem;
+  top: 0.9rem;
+}
+.main {
+  margin-top: 3rem;
+  margin-left: 3rem;
+}
+.main-header {
+  margin-bottom: 2rem;
+  font-size: 5rem;
+}
+.main p {
+  font-size: 1.2rem;
+}
+footer {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+  bottom: 0;
+  width: 100%;
+  height: 15rem;
+  background: #fff;
+  box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.3);
+}
+footer .logo-and-copyright-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.footer-logo {
+  position: relative;
+  font-size: 1.5rem;
+  color: #000;
+  margin-bottom: 1rem;
+}
+footer .footer-logo span {
+  background: url(./main-background.png);
+  background-repeat: no-repeat;
+  background-size: 100% 13px;
+  background-position: 75% 67%;
+}
+footer .footer-rights {
+  position: relative;
+  color: #aaa;
+}
+
+.footer-explore p,
+.footer-legal p {
+  font-size: 1.3em;
+  margin-bottom: 0.4rem;
+}
+
+.footer-explore {
+  margin-right: 3rem;
+}
+
+.footer-links-wrapper {
+  display: flex;
+}
+
+.footer-links {
+  text-decoration: none;
+  font-size: larger;
+}
+@media screen and (max-width: 800px) {
+  html {
+    width: 100vw;
+    scroll-behavior: smooth;
+  }
+  .site-wrapper {
+    overflow-x: hidden;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    background: url(./Online_school_PNG.png), url(./main-background.png);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 10rem, 150px 200vh;
+    background-origin: border-box, border-box;
+    background-position: 58vw 8vh, 80% 0%;
+  }
+  nav {
+    box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    margin: 1rem 1rem;
+    width: 92.5%;
+    min-width: 92.5%;
+    transition: all 500ms ease-in-out;
+    z-index: 20000;
+  }
+  #hamburger {
+    display: block;
+    transition: all 500ms ease-in-out;
+  }
+  #x {
+    display: none;
+    transition: all 500ms ease-in-out;
+  }
+  nav ul {
+    display: none;
+    margin: 0.5rem;
+    transition: all 500ms ease-in-out;
+  }
+  nav ul li {
+    margin: 0 2px;
+    list-style: none;
+    transition: all 500ms ease-in-out;
+  }
+  nav ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: #000;
+    border: 1px;
+    border-radius: 30px;
+    padding: 1px 4px;
+    background: none;
+    transition: all 200ms ease-in-out;
+  }
+  .logo {
+    font-weight: bolder;
+    position: relative;
+    margin-left: -14rem;
+  }
+  .tab-bar {
+    height: 3rem;
+    display: flex;
+    width: 100%;
+    z-index: 20000;
+    position: fixed;
+    bottom: 0;
+    background-color: #333;
+  }
+  .tab-bar ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  .tab-bar ul li {
+    list-style: none;
+    display: block;
+    text-align: center;
+    height: 100%;
+    border-right: 1px solid rgba(255, 255, 255);
+  }
+  .tab-bar ul li:last-child {
+    border: none;
+  }
+  .tab-bar .tab-links {
+    height: 100%;
+    display: block;
+    border: none;
+    background-color: #222;
+    padding: 0 45px;
+    color: #ccc;
+    padding-top: 7px;
+    outline: none;
+    font-weight: 800;
+    text-decoration: none;
+  }
+  .tab-links i {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .tab-bar ul li .tab-active {
+    color: #f0b70c;
+    outline: none;
+  }
+  .main {
+    margin-left: 1rem;
+    height: 1350px;
+  }
+  .main-header {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    font-size: 5em;
+  }
+  .main p {
+    line-height: 1.5rem;
+    font-size: 1.3em;
+    max-width: 90%;
+  }
+  .main-content {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 3rem;
+    padding-left: 1rem;
+    padding-top: 0.3rem;
+    padding-bottom: 2rem;
+  }
+  .footer-logo {
+    position: relative;
+    font-size: 1.5rem;
+    left: 0;
+    color: #000;
+  }
+
+  footer .footer-logo span {
+    background: url(./main-background.png);
+    background-repeat: no-repeat;
+    background-size: 100% 13px;
+    background-position: 75% 67%;
+  }
+
+  footer .footer-rights {
+    color: #aaa;
+    position: relative;
+    left: 0;
+  }
+
+  .footer-legal p,
+  .footer-explore p {
+    font-size: 1.3em;
+  }
+
+  .footer-links {
+    margin: 0;
+    text-decoration: none;
+    font-size: larger;
+  }
+  footer .footer-links-wrapper {
+    display: flex;
+  }
+}
