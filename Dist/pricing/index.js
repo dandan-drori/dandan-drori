@@ -43,9 +43,37 @@ const openNav = () => {
     navItems[0].style.marginTop = '10px';
     navItems[1].style.marginTop = '10px';
     navItems[2].style.marginTop = '10px';
+    navBar.style.backgroundColor = '#fff';
   } else {
     navLinks.style.display = 'none';
     hamburger.style.display = 'block';
     x.style.display = 'none';
+  }
+};
+
+const showHideExploreLinks = () => {
+  const exploreLinks = document.getElementsByClassName('explore-links')[0];
+  const arrow = document.getElementsByClassName('fa-chevron-down')[0];
+  if (exploreLinks.style.display === 'none') {
+    exploreLinks.style.display = 'block';
+    arrow.style.color = '#f0b70c';
+    arrow.style.transform = 'rotateZ(180deg)';
+  } else {
+    exploreLinks.style.display = 'none';
+    arrow.style.color = '#000';
+    arrow.style.transform = 'rotateZ(0deg)';
+  }
+};
+const showHideLegalLinks = () => {
+  const legalLinks = document.getElementsByClassName('legal-links')[0];
+  const arrow = document.getElementsByClassName('fa-chevron-down')[1];
+  if (legalLinks.style.display === 'none') {
+    legalLinks.style.display = 'block';
+    arrow.style.color = '#f0b70c';
+    arrow.style.transform = 'rotateZ(180deg)';
+  } else {
+    legalLinks.style.display = 'none';
+    arrow.style.color = '#000';
+    arrow.style.transform = 'rotateZ(0deg)';
   }
 };

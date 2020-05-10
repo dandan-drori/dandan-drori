@@ -13,8 +13,8 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background: url(./images/Web_design_PNG.png),
-    url(./images/main-background.png);
+  background: url(./images/Web_design_PNG.webp),
+    url(./images/main-background.webp);
   background-repeat: no-repeat, no-repeat;
   background-size: 27rem, 300px 700px;
   background-position: 61vw 17vh, 75% 0%;
@@ -55,7 +55,7 @@ nav .logo {
   font-size: 1.5rem;
 }
 nav .logo span {
-  background: url(./images/main-background.png);
+  background: url(./images/main-background.webp);
   background-repeat: no-repeat;
   background-size: 100% 13px;
   background-position: 75% 67%;
@@ -115,7 +115,7 @@ div.active {
   display: flex;
 }
 .home-page h1 span {
-  background: url(./images/main-background.png);
+  background: url(./images/main-background.webp);
   background-repeat: no-repeat;
   background-size: 100% 12px;
   background-position: 75% 65%;
@@ -323,7 +323,7 @@ nav ul li a:focus {
 .cards div i {
   color: #f0b70c;
   margin-top: 1.5rem;
-  background: url(./images/background-test3.jpg);
+  background: url(./images/background-test3.webp);
   background-repeat: no-repeat;
   padding: 25px;
   padding-left: 35px;
@@ -349,7 +349,7 @@ nav ul li a:focus {
   position: absolute;
   width: 100%;
   height: 70%;
-  background: url(./images/blank-business-composition-computer-373076.jpg);
+  background: url(./images/blank-business-composition-computer-373076.webp);
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.2;
@@ -438,7 +438,7 @@ footer .logo-and-copyright-wrapper {
   margin-bottom: 1rem;
 }
 footer .footer-logo span {
-  background: url(./images/main-background.png);
+  background: url(./images/main-background.webp);
   background-repeat: no-repeat;
   background-size: 100% 13px;
   background-position: 75% 67%;
@@ -467,7 +467,7 @@ footer .footer-rights {
   font-size: larger;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
   html {
     width: 100vw;
     scroll-behavior: smooth;
@@ -479,12 +479,12 @@ footer .footer-rights {
     margin: 0;
     padding: 0;
     width: 100vw;
-    background: url(./images/Web_design_PNG.png),
-      url(./images/main-background.png);
+    background: url(./images/Web_design_PNG.webp),
+      url(./images/main-background.webp);
     background-repeat: no-repeat, no-repeat;
     background-size: 11rem, 150px 100vh;
     background-origin: border-box, border-box;
-    background-position: 53vw 35vh, 80% 0%;
+    background-position: 53vw 37vh, 80% 0%;
   }
   nav {
     box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.3);
@@ -506,19 +506,23 @@ footer .footer-rights {
   nav ul {
     display: none;
     margin: 0.5rem;
+    min-width: 50%;
+    flex-direction: column;
+    justify-content: center;
     transition: all 500ms ease-in-out;
   }
-  nav ul li {
-    margin: 0 2px;
+  nav ul .nav-items {
     list-style: none;
     transition: all 500ms ease-in-out;
   }
 
-  nav ul li:last-child {
+  nav ul .nav-items {
     margin-top: 10px;
+    display: flex;
+    justify-content: center;
   }
 
-  nav ul li a {
+  nav ul .nav-items a {
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: bolder;
@@ -528,6 +532,15 @@ footer .footer-rights {
     padding: 1px 4px;
     background: none;
     transition: all 200ms ease-in-out;
+  }
+  .explore-button,
+  .legal-button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: large;
+    margin-left: 4px;
   }
   .logo {
     font-weight: bolder;
@@ -552,6 +565,7 @@ footer .footer-rights {
     list-style: none;
     display: block;
     text-align: center;
+    width: 33.33%;
     height: 100%;
     border-right: 1px solid rgba(255, 255, 255);
   }
@@ -563,7 +577,6 @@ footer .footer-rights {
     display: block;
     border: none;
     background-color: #222;
-    padding: 0 45px;
     color: #ccc;
     padding-top: 8px;
     outline: none;
@@ -588,7 +601,13 @@ footer .footer-rights {
   header .subheaders-wrapper p {
     min-width: 18rem;
     font-size: 1.2em;
+    line-height: 1.4em;
   }
+
+  .contact-link-para {
+    margin-top: 0.3rem;
+  }
+
   .fa-long-arrow-alt-right {
     color: #f0b70c;
   }
@@ -626,7 +645,7 @@ footer .footer-rights {
   }
 
   footer .footer-logo span {
-    background: url(./images/main-background.png);
+    background: url(./images/main-background.webp);
     background-repeat: no-repeat;
     background-size: 100% 13px;
     background-position: 75% 67%;
@@ -827,4 +846,386 @@ footer .footer-rights {
       left: -100%;
     }
   }
+}
+
+@media screen and (max-width: 800px) {
+  html {
+    width: 100vw;
+    scroll-behavior: smooth;
+  }
+  .site-wrapper {
+    overflow-x: hidden;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    background: url(./images/Web_design_PNG.webp),
+      url(./images/main-background.webp);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 11rem, 150px 100vh;
+    background-origin: border-box, border-box;
+    background-position: 58vw 15vh, 80% 0%;
+  }
+  nav {
+    box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    margin: 1rem 1rem;
+    width: 92.5%;
+    min-width: 92.5%;
+    transition: all 500ms ease-in-out;
+    z-index: 20000;
+  }
+  #hamburger {
+    display: block;
+    transition: all 500ms ease-in-out;
+  }
+  #x {
+    display: none;
+    transition: all 500ms ease-in-out;
+  }
+  nav ul {
+    display: none;
+    margin: 0.5rem;
+    min-width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 500ms ease-in-out;
+  }
+  nav ul .nav-items {
+    list-style: none;
+    transition: all 500ms ease-in-out;
+  }
+
+  nav ul .nav-items {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav ul .nav-items a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: #000;
+    border: 1px;
+    border-radius: 30px;
+    padding: 1px 4px;
+    background: none;
+    transition: all 200ms ease-in-out;
+  }
+  .explore-button,
+  .legal-button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: large;
+    margin-left: 4px;
+  }
+  .logo {
+    font-weight: bolder;
+    position: relative;
+    margin-left: -14rem;
+  }
+  .tab-bar {
+    height: 3rem;
+    display: flex;
+    width: 100%;
+    z-index: 20000;
+    position: fixed;
+    bottom: 0;
+    background-color: #333;
+  }
+  .tab-bar ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  .tab-bar ul li {
+    list-style: none;
+    display: block;
+    text-align: center;
+    width: 33.33%;
+    height: 100%;
+    border-right: 1px solid rgba(255, 255, 255);
+  }
+  .tab-bar ul li:last-child {
+    border: none;
+  }
+  .tab-bar .tab-links {
+    height: 100%;
+    display: block;
+    border: none;
+    background-color: #222;
+    color: #ccc;
+    padding-top: 8px;
+    outline: none;
+    font-weight: 800;
+    text-decoration: none;
+  }
+  .tab-links i {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .tab-bar ul li .tab-active {
+    color: #f0b70c;
+    outline: none;
+  }
+  .home-subwrapper {
+    position: relative;
+    right: 3rem;
+  }
+  header h1 {
+    min-width: 13rem;
+  }
+  header .subheaders-wrapper p {
+    min-width: 18rem;
+    font-size: 1.2em;
+    line-height: 1.4em;
+  }
+
+  .contact-link-para {
+    margin-top: 0.3rem;
+  }
+
+  .fa-long-arrow-alt-right {
+    color: #f0b70c;
+  }
+  .home #view-my-work {
+    margin-top: 2rem;
+  }
+  .services {
+    height: 1250px;
+    width: 100%;
+  }
+  .cards {
+    flex-direction: column;
+  }
+  .cards > div {
+    width: 300px;
+  }
+  .background {
+    height: 60%;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    padding-left: 1.5rem;
+    bottom: 3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+  }
+  .footer-logo {
+    position: relative;
+    font-size: 1.5rem;
+    left: 0;
+    color: #000;
+  }
+
+  footer .footer-logo span {
+    background: url(./images/main-background.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 13px;
+    background-position: 75% 67%;
+  }
+
+  footer .footer-rights {
+    color: #aaa;
+    position: relative;
+    left: 0;
+  }
+
+  .footer-legal p,
+  .footer-explore p {
+    font-size: 1.3em;
+  }
+
+  .footer-links {
+    margin: 0;
+    text-decoration: none;
+    font-size: larger;
+  }
+  footer .footer-links-wrapper {
+    display: flex;
+  }
+
+  .to-top {
+    position: fixed;
+    background: #000;
+    display: none;
+    opacity: 0;
+    border-radius: 50%;
+    padding-top: 13px;
+    color: #fff;
+    bottom: 55px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    z-index: 9999;
+    transition: all 200ms ease-in-out;
+  }
+  [data-animation] {
+    overflow: hidden;
+    position: relative;
+  }
+  .ripple {
+    position: absolute;
+    background: #ccc;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: animate 350ms linear;
+    z-index: 9000;
+  }
+  @keyframes animate {
+    0% {
+      width: 0;
+      height: 0;
+      opacity: 0.5;
+    }
+    100% {
+      width: 500px;
+      height: 500px;
+      opacity: 0;
+    }
+  }
+  #email-text {
+    display: inline;
+    font-weight: 300;
+  }
+  .home {
+    height: 100vh;
+  }
+  #hireme {
+    display: none;
+    margin-top: 5rem;
+  }
+  .portfolio-heading {
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+    margin-left: 3rem;
+    font-size: 2em;
+  }
+  .carousel-container {
+    min-width: 18rem;
+    height: 13rem;
+    position: relative;
+    display: flex;
+    top: 29rem;
+    justify-content: center;
+    align-items: center;
+    right: 18.2rem;
+  }
+  .carousel-track-container {
+    overflow: hidden;
+    height: 100%;
+  }
+  .carousel {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 250ms ease-in;
+  }
+  .carousel-items {
+    min-width: 100%;
+    height: 100%;
+  }
+  .carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .slide-left-button,
+  .slide-right-button {
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+    border: none;
+    outline: none;
+    font-weight: 800;
+    font-size: 1.5rem;
+    background: none;
+    color: #000;
+    transition: color 200ms;
+    cursor: pointer;
+  }
+  .slide-left-button {
+    left: -35px;
+  }
+  .slide-right-button {
+    right: -35px;
+  }
+  .carousel .first-link {
+    display: inline-block;
+    position: absolute;
+    z-index: 100;
+    bottom: 0.5rem;
+    left: 55%;
+  }
+  .carousel .second-link {
+    display: inline-block;
+    position: absolute;
+    z-index: 100;
+    bottom: 0.5rem;
+    left: 37%;
+  }
+  .carousel i {
+    color: black;
+  }
+  .carousel-nav {
+    position: relative;
+    top: 42rem;
+    right: 30rem;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  .carousel-indicator {
+    border: 0;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 0 0.4rem;
+    cursor: pointer;
+    outline: none;
+  }
+  .current-slide {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .is-hidden {
+    display: none;
+  }
+  @keyframes testSlide {
+    0% {
+      left: 100%;
+    }
+    49% {
+      opacity: 1;
+    }
+    50% {
+      left: -100%;
+      opacity: 0;
+    }
+    51% {
+      left: 100%;
+      opacity: 0;
+    }
+    52% {
+      opacity: 1;
+    }
+    100% {
+      left: -100%;
+    }
+  }
+}  
 }

@@ -65,8 +65,45 @@
           </li>
           <li class="nav-items"><a href="../contact/index.html">Contact</a></li>
           <li class="nav-items">
-            <a href="#footer">More</a>
+            <button class="explore-button" onclick="showHideExploreLinks()">
+              Explore <i class="fas fa-chevron-down"></i>
+            </button>
           </li>
+          <div
+            class="explore-links animate__animated animate__fadeInDown animate__faster"
+            style="display: none;"
+          >
+            <li class="nav-items">
+              <a href="./about/index.html">About</a>
+            </li>
+            <li class="nav-items">
+              <a href="./pricing/index.html">Pricing</a>
+            </li>
+            <li class="nav-items">
+              <a href="#">My Blog</a>
+            </li>
+            <li class="nav-items">
+              <a href="./FAQ/index.html">FAQ</a>
+            </li>
+          </div>
+          <li class="nav-items">
+            <button class="legal-button" onclick="showHideLegalLinks()">
+              Legal <i class="fas fa-chevron-down"></i>
+            </button>
+          </li>
+          <div
+            class="legal-links animate__animated animate__fadeInDown animate__faster"
+            style="display: none;"
+          >
+            <li class="nav-items">
+              <a href="./privacy/index.html">Privacy Policy</a>
+            </li>
+            <li class="nav-items">
+              <a href="./terms-and-conditions/index.html"
+                >Terms and Conditions</a
+              >
+            </li>
+          </div>
         </ul>
         <i id="hamburger" class="fas fa-bars" onclick="openNav()"></i>
         <i id="x" class="fas fa-times" onclick="openNav()"></i>
@@ -145,13 +182,21 @@
             <div>
               <a href="#" class="footer-links">pricing</a>
             </div>
-            <div><a href="#" class="footer-links">FAQs</a></div>
+            <div><a href="../FAQ/index.html" class="footer-links">FAQ</a></div>
             <div><a href="#" class="footer-links">my blog</a></div>
           </div>
           <div class="footer-legal">
             <p>Legal</p>
-            <div><a href="#" class="footer-links">privacy policy</a></div>
-            <div><a href="#" class="footer-links">terms and conditions</a></div>
+            <div>
+              <a href="../privacy/index.html" class="footer-links"
+                >privacy policy</a
+              >
+            </div>
+            <div>
+              <a href="../terms-and-conditions/index.html" class="footer-links"
+                >terms and conditions</a
+              >
+            </div>
           </div>
         </div>
       </footer>
