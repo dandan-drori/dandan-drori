@@ -315,7 +315,6 @@ footer .footer-rights {
   }
   .main {
     margin-left: 1rem;
-    height: 700px;
   }
   .main-header {
     margin-left: 2.1rem;
@@ -354,12 +353,27 @@ footer .footer-rights {
     max-width: 90%;
   }
 
+  .open {
+    animation: fade 300ms ease-in-out;
+  }
+  @keyframes fade {
+    from {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     position: relative;
     padding-left: 1.5rem;
+    margin-top: 5rem;
     bottom: 3rem;
     padding-top: 0.5rem;
     padding-bottom: 1rem;

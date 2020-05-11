@@ -63,13 +63,15 @@ const showHideAnswer = (e) => {
   if (e.nextElementSibling.style.display === 'none') {
     // when question is clicked, if answer is hidden, show it, and change the arrow's direction.
     e.nextElementSibling.style.display = 'block';
+    e.nextElementSibling.classList.toggle('open');
     e.childNodes[1].style.transform = 'rotateZ(90deg)';
     e.childNodes[1].style.color = '#f0b70c';
   } else {
     // when question is clicked, if answer is shown, hide it, and change the arrow's direction.
-    e.nextElementSibling.style.display = 'none';
     e.childNodes[1].style.transform = 'rotateZ(0deg)';
     e.childNodes[1].style.color = '#000';
+    e.nextElementSibling.classList.toggle('open');
+    e.nextElementSibling.style.display = 'none';
   }
 };
 

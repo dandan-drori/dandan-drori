@@ -300,10 +300,6 @@ footer .footer-rights {
     color: #f0b70c;
     outline: none;
   }
-  .main-content {
-    height: 430px;
-    margin-bottom: 5rem;
-  }
   .main-header {
     margin-top: 6rem;
     margin-left: 1.5rem;
@@ -334,6 +330,7 @@ footer .footer-rights {
     position: relative;
     padding-left: 1.5rem;
     bottom: 3rem;
+    margin-top: 5rem;
     padding-top: 0.5rem;
     padding-bottom: 1rem;
   }

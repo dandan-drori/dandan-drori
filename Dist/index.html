@@ -4,7 +4,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script 
     async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-163587214-1"
+      src="https://www.googletagmanager.com/gtag/js?id=UA-163587214-2"
     ></script>
     <title>Dandan Drori - Web Developer and Designer</title>
     <meta charset="UTF-8" />
@@ -20,6 +20,7 @@
     <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href="https://www.dandandrori.com">
     <link rel="stylesheet" href="styles.css" type="text/css" />
     <link 
       defer 
@@ -32,6 +33,15 @@
       src="https://kit.fontawesome.com/a91f9c67ce.js"
       crossorigin="anonymous"
     ></script>
+    <script type="application/ld+json">
+      { 
+        "@context" : "http://schema.org",
+        "@type" : "Organization",
+        "name" : "Dandan Drori",
+        "url" : "https://www.dandandrorid.com",
+        "logo" : "https://www.dandandrorid.com/images/portfolioProject.webp"
+      }
+    </script>
   </head>
   <body>
     <div class="site-wrapper">
@@ -42,26 +52,26 @@
               <a href="#">Home</a>
             </li>
             <li class="nav-items">
-              <a href="./portfolio/index.html">Portfolio</a>
+              <a href="./portfolio/">Portfolio</a>
             </li>
             <li class="nav-items">
-              <a href="./Contact/index.html">Contact</a>
+              <a href="./contact/">Contact</a>
             </li>
             <li class="nav-items">
               <button class="explore-button" onclick="showHideExploreLinks()">Explore <i class="fas fa-chevron-down"></i></button>
             </li>
             <div class="explore-links animate__animated animate__fadeInDown animate__faster" style="display: none;">
             <li class="nav-items">
-              <a href="./about/index.html">About</a>
+              <a href="./about/">About</a>
             </li>
             <li class="nav-items">
-              <a href="./pricing/index.html">Pricing</a>
+              <a href="./pricing/">Pricing</a>
             </li>
             <li class="nav-items">
               <a href="#">My Blog</a>
             </li>
             <li class="nav-items">
-              <a href="./FAQ/index.html">FAQ</a>
+              <a href="./FAQ/">FAQ</a>
             </li>
           </div>
           <li class="nav-items">
@@ -69,10 +79,10 @@
           </li>
           <div class="legal-links animate__animated animate__fadeInDown animate__faster" style="display: none;">
             <li class="nav-items">
-              <a href="./privacy/index.html">Privacy Policy</a>
+              <a href="./privacy/">Privacy Policy</a>
             </li>
             <li class="nav-items">
-              <a href="./terms-and-conditions/index.html">Terms and Conditions</a>
+              <a href="./terms-and-conditions/">Terms and Conditions</a>
             </li>
           </div>
           </ul>
@@ -95,7 +105,7 @@
             <li>
               <a 
                 class="tab-links"
-                href="./portfolio/index.html"
+                href="./portfolio/"
                 onclick="openPage('portfolio', this)">
                 <i class="fas fa-briefcase fa-lg"></i>
                 Portfolio
@@ -104,7 +114,7 @@
             <li>
               <a 
                 class="tab-links"
-                href="./contact/index.html" 
+                href="./contact/" 
                 onclick="openPage('hireme', this)">
                 <i class="fas fa-phone fa-lg"></i>
                 Contact
@@ -127,12 +137,12 @@
               <div class="subheaders-wrapper">
                 <p>Do you need a new website for your business?</p>
                 <p>Are you looking for a Front End Developer for a position?</p>
-                <p class="contact-link-para"><a class="contact-me-now" href="./contact/index.html">Contact me now</a></p>
+                <p class="contact-link-para"><a class="contact-me-now" href="./contact/">Contact me now</a></p>
               </div>
             </div>
             <div class="home-button-wrapper">
               <a
-                href="./portfolio/index.html"
+                href="./portfolio/"
                 class="myRipple"
                 data-animation="ripple"
                 id="view-my-work"
@@ -143,32 +153,6 @@
                 </div>  
               </a>
             </div>
-          </div>
-          <div class="carousel-container" onclick="stopMoving()">
-            <button class="slide-left-button is-hidden" aria-label="slide-images-left">&#10094;</button>
-            <div class="carousel-track-container" onmouseover="stopMoving()">
-          <ul class="carousel">
-            <li class="carousel-items current-slide first-slide" id="carousel-portfolio">
-              <img src="./images/portfolioProject.webp" alt="a link to the source code of my portfolio"> 
-              <span class="first-link"><a rel="noopener" href="https://github.com/dandan-drori/dandan-drori" target="_blank"><i class="fab fa-github fa-2x"></i></a></span>
-              <span class="second-link"><a rel="noopener" href="https://codepen.io/dandan-drori/pen/zYvNOjV" target="_blank"><i class="fas fa-gamepad fa-2x"></i></a></span>
-            </li>
-            <li class="carousel-items second-slide">
-              <img src="./images/background-test4.webp" alt="a link to the source code of my portfolio"> 
-              <span><a href="#"></a></span>
-            </li>
-            <li class="carousel-items third-slide">
-              <img src="./images/background-test3.webp" alt="a link to the source code of my portfolio"> 
-              <span><a href="#"></a></span>
-            </li>
-          </ul>
-        </div>
-          <button class="slide-right-button" aria-label="slide-images-right">&#10095;</button>
-          </div>
-          <div class="carousel-nav">
-            <button class="carousel-indicator current-slide" aria-label="control-movement-of-image-carousel"></button>
-            <button class="carousel-indicator" aria-label="control-movement-of-image-carousel"></button>
-            <button class="carousel-indicator" aria-label="control-movement-of-image-carousel"></button>
           </div>
         </header>
         <a href="#" class="to-top">
@@ -250,15 +234,15 @@
       <div class="footer-links-wrapper">
         <div class="footer-explore">
           <p>Explore</p>
-          <div><a href="./about/index.html" class="footer-links">about</a></div>
-          <div><a href="./pricing/index.html" class="footer-links">pricing</a></div>
-          <div><a href="./FAQ/index.html" class="footer-links">FAQ</a></div>
+          <div><a href="./about/" class="footer-links">about</a></div>
+          <div><a href="./pricing/" class="footer-links">pricing</a></div>
+          <div><a href="./FAQ/" class="footer-links">FAQ</a></div>
           <div><a href="#" class="footer-links">my blog</a></div>
         </div>
         <div class="footer-legal">
           <p>Legal</p>
-          <div><a href="./privacy/index.html" class="footer-links">privacy policy</a></div>
-          <div><a href="./terms-and-conditions/index.html" class="footer-links">terms and conditions</a></div>
+          <div><a href="./privacy/" class="footer-links">privacy policy</a></div>
+          <div><a href="./terms-and-conditions/" class="footer-links">terms and conditions</a></div>
         </div>
       </div>
     </footer>

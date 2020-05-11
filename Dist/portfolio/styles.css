@@ -210,7 +210,7 @@ footer .footer-rights {
     width: 100vw;
     background: url(./Startup_PNG.webp), url(./main-background.webp);
     background-repeat: no-repeat, no-repeat;
-    background-size: 8rem, 150px 100vh;
+    background-size: 8rem, 150px 300vh;
     background-origin: border-box, border-box;
     background-position: 59vw 10vh, 80% 0%;
   }
@@ -315,9 +315,6 @@ footer .footer-rights {
     color: #f0b70c;
     outline: none;
   }
-  .main {
-    height: 1650px;
-  }
   .main-header {
     position: relative;
     margin-top: 4rem;
@@ -325,6 +322,9 @@ footer .footer-rights {
     top: 1.5rem;
     right: 1.5rem;
     font-size: 3.5em;
+  }
+  .projects-wrapper {
+    height: initial;
   }
   .projects {
     width: 85%;
@@ -335,6 +335,7 @@ footer .footer-rights {
     align-items: flex-start;
     position: relative;
     padding-left: 1.5rem;
+    margin-top: 5rem;
     bottom: 3rem;
     padding-top: 0.5rem;
     padding-bottom: 1rem;
