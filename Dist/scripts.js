@@ -1,3 +1,12 @@
+const navLinks = document.getElementById('nav-links');
+let viewPortWidth = window.innerWidth;
+
+if (viewPortWidth > 800) {
+  navLinks.style.display = 'flex';
+} else {
+  navLinks.style.display = 'none';
+}
+
 function openPage(pageName, e) {
   var i, tabContent, tabLinks;
   tabContent = document.getElementsByClassName('tab-content');
@@ -60,7 +69,6 @@ document.getElementsByClassName('to-top')[0].onmousedown = () => {
   document.getElementsByTagName('body')[0].animate({ scrollTop: 0 }, 1000);
 };
 
-const navLinks = document.getElementById('nav-links');
 const hamburger = document.getElementById('hamburger');
 const x = document.getElementById('x');
 const navItems = document.getElementsByClassName('nav-items');

@@ -52,6 +52,8 @@ nav {
 }
 nav .logo {
   font-size: 1.5rem;
+  position: relative;
+  margin-right: 15rem;
 }
 nav .logo span {
   background: url(./main-background.webp);
@@ -70,20 +72,49 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #000;
-  border: 1px;
-  border-radius: 30px;
-  padding: 3px 7px;
-  padding-bottom: 6px;
+  font-size: large;
   background: none;
   transition: all 200ms ease-in-out;
 }
 nav ul li a:hover,
 nav ul li a:focus {
-  color: #fff;
-  border-radius: 30px;
-  padding: 3px 7px;
-  padding-bottom: 6px;
-  background: #000;
+  border-bottom: 3px solid black;
+}
+
+#nav-bar #nav-links .explore-links .nav-items:last-child {
+  border-bottom: 3px solid black;
+}
+.explore-button,
+.legal-button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: large;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.explore-button:hover,
+.legal-button:hover {
+  border-bottom: 3px solid black;
+}
+.explore-links,
+.legal-links {
+  position: absolute;
+  margin-top: 2rem;
+  margin-left: 22.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 3px 3px 1px black, -2px -2px 3px 1px black;
+  background-color: #fff;
+}
+.legal-links {
+  margin-left: 28rem;
+}
+.explore-links li,
+.legal-links li {
+  margin: 0.5rem 0;
 }
 .tab-links {
   display: none;
@@ -128,6 +159,7 @@ nav ul li a:focus {
 
 .question {
   font-size: 1.5em;
+  cursor: pointer;
 }
 
 .question .fa-chevron-right {
@@ -264,10 +296,19 @@ footer .footer-rights {
     font-size: large;
     margin-left: 4px;
   }
+  .explore-links,
+  .legal-links {
+    position: relative;
+    box-shadow: none;
+    background: none;
+    margin-left: 0;
+    margin-top: 0;
+  }
   .logo {
     font-weight: bolder;
     position: relative;
-    margin-left: -14rem;
+    margin-left: 4rem;
+    min-width: 9rem;
   }
   .tab-bar {
     height: 3rem;

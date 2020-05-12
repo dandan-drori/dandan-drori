@@ -47,7 +47,7 @@
     <div class="site-wrapper">
         <nav id="nav-bar">
           <div class="logo">Dandan <span>Drori</span></div>
-          <ul id="nav-links" style="display: none;">
+          <ul id="nav-links">
             <li class="nav-items">
               <a href="#">Home</a>
             </li>
@@ -60,7 +60,7 @@
             <li class="nav-items">
               <button class="explore-button" onclick="showHideExploreLinks()">Explore <i class="fas fa-chevron-down"></i></button>
             </li>
-            <div class="explore-links animate__animated animate__fadeInDown animate__faster" style="display: none;">
+            <div class="explore-links" style="display: none;">
             <li class="nav-items">
               <a href="./about/">About</a>
             </li>
@@ -204,23 +204,29 @@
         <p class="testimonials-heading">What My Clients Say About Me</p>
         <div class="testimonials-wrapper">
           <div class="testimonials-slider">
-            <div class="testimonials-cards">
-              <img src="./favicon/favicon-16x16.png" alt="profile picture of a person quoted for testimonials" class="profile-picture">
-              <p><i class="fas fa-quote-left"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, dolores?<i class="fas fa-quote-right"></i></p>
-              <p class="testimonials-name">person name</p>
-              <p class="quote-from">social network with symbol</p>
+            <div class="testimonials-cards" data-scroll>
+              <img src="./images/Gary2.webp" alt="profile picture of a person quoted for testimonials" class="profile-picture">
+              <div class="testimonials-content-wrapper">
+              <p class="testimonials-name gary">Gary</p>
+              <p class="quote-from"> <i class="fab fa-facebook-f"></i> Facebook</p>
+              <p><i class="fas fa-quote-left"></i> I got a response in less than a day and we started working on my website right away! it was great. <i class="fas fa-quote-right"></i></p>
             </div>
-            <div class="testimonials-cards">
-              <img src="./favicon/favicon-16x16.png" alt="profile picture of a person quoted for testimonials" class="profile-picture">
-              <p><i class="fas fa-quote-left"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, dolores?<i class="fas fa-quote-right"></i></p>
-              <p class="testimonials-name">person name</p>
-              <p class="quote-from">social network with symbol</p>
             </div>
-            <div class="testimonials-cards">
-              <img src="./favicon/favicon-16x16.png" alt="profile picture of a person quoted for testimonials" class="profile-picture">
-              <p><i class="fas fa-quote-left"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, dolores?<i class="fas fa-quote-right"></i></p>
-              <p class="testimonials-name">person name</p>
-              <p class="quote-from">social network with symbol</p>
+            <div class="testimonials-cards" data-scroll>
+              <div class="testimonials-content-wrapper">
+              <p class="testimonials-name nicole">Nicole</p>
+              <p class="quote-from">Twitter <i class="fab fa-twitter"></i> </p>
+              <p><i class="fas fa-quote-left"></i> Dandan made my dreams come true! Now i have my own website for my business! <i class="fas fa-quote-right"></i></p>
+            </div>
+            <img src="./images/Nicole.webp" alt="profile picture of a person quoted for testimonials" class="profile-picture">
+            </div>
+            <div class="testimonials-cards" data-scroll>
+              <img src="./images/Philip.webp" alt="profile picture of a person quoted for testimonials" class="profile-picture">
+              <div class="testimonials-content-wrapper">
+              <p class="testimonials-name philip">Philip</p>
+              <p class="quote-from"> <i class="fab fa-facebook-f"></i> Facebook</p>
+              <p><i class="fas fa-quote-left"></i> The price was fair and the outcome was amazing. <i class="fas fa-quote-right"></i></p>
+            </div>
             </div>
           </div>
         </div>
