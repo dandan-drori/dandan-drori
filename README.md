@@ -1,0 +1,5 @@
+- 👋 Hi, I’m @dandan-drori,
+- 👀 I’m interested in CODING. Just let me code pleaseeee.
+- 🌱 I’m currently learning GraphQL, Firebase and Stripe.
+- 💞️ I’m looking to collaborate on any Project really, linux related, npm libraries, or any tech project.
+- 📫 How to reach me - if you really want to, you will find a way.
