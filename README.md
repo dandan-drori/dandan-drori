@@ -1,11 +1,9 @@
 <h1 align="center">Hi 👋, I'm Dandan Drori</h1>
 <h3 align="center">A passionate fullstack developer from Israel</h3>
 
-- 🌱 I’m currently learning **Angular**
+- 💬 Ask me about **Angular, React, Vue, Nest.js, Node MongoDB and Javascript**
 
-- 💬 Ask me about **React, Vue, Node and Javascript**
-
-- ⚡ Fun fact **I play volleyball**
+- ⚡ Fun fact **I play Volleyball**
 
 
 <h3 align="left">Languages and Tools:</h3>
